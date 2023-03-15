@@ -78,6 +78,9 @@
 
 <a href="https://github.com/KimCookk/KrHangman-iOS-Project/blob/main/KrHangMan-iOS/Model/HangManGame.swift"><strong >HangManGame</strong></a>
 
+• 기획자, 백엔드, 안드로이드 타 파트 인원들과 의사소통하며 프로젝트를 진행함으로써 협업 경험을 할 수 있었습니다. git, notion, slack 협업 툴 역량을 쌓을 수 있었습니다.
+
+
 </br>
 
 - - -

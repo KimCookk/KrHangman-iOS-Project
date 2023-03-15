@@ -1,9 +1,5 @@
-<a name="readme-top"></a>
 
-
-
-
-<!-- PROJECT LOGO -->
+<a name="readmeTop"></a>
 <br />
 <div align="left">
   <h1 >한글행맨  </h1>
@@ -20,10 +16,10 @@
 <br />
 
 ## 목차
-#### <a href="#팀 & 프로젝트">&nbsp;&nbsp;&nbsp;&nbsp;1. 팀 & 프로젝트</a>
-#### <a href="#아키텍쳐 및 사용기술">&nbsp;&nbsp;&nbsp;&nbsp;2. 아키텍쳐 및 사용기술</a>
-#### <a href="#담당 업무">&nbsp;&nbsp;&nbsp;&nbsp;3. 담당 업무</a>
-#### <a href="#스크린 샷">&nbsp;&nbsp;&nbsp;&nbsp;4. 스크린샷</a>
+#### <a href="#팀-&-프로젝트">&nbsp;&nbsp;&nbsp;&nbsp;1. 팀 & 프로젝트</a>
+#### <a href="#아키텍쳐-및-사용기술">&nbsp;&nbsp;&nbsp;&nbsp;2. 아키텍쳐 및 사용기술</a>
+#### <a href="#담당-업무">&nbsp;&nbsp;&nbsp;&nbsp;3. 담당 업무</a>
+#### <a href="#스크린-샷">&nbsp;&nbsp;&nbsp;&nbsp;4. 스크린샷</a>
 <br />
 
 - - -
@@ -114,7 +110,9 @@
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+</br>
+
 
 - - -
 

@@ -11,6 +11,13 @@
 		20006AB5295980DF00ADA916 /* WordCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20006AB3295980DF00ADA916 /* WordCollectionCell.swift */; };
 		20006AB6295980DF00ADA916 /* WordCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20006AB4295980DF00ADA916 /* WordCollectionCell.xib */; };
 		20006ABD2959947100ADA916 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20006ABC2959947000ADA916 /* KeyboardView.swift */; };
+		2025915D29C8452F00DE57AC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025915C29C8452F00DE57AC /* Coordinator.swift */; };
+		2025915F29C845AC00DE57AC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025915E29C845AC00DE57AC /* MainCoordinator.swift */; };
+		2025916229C846C000DE57AC /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916129C846BF00DE57AC /* MainPage.swift */; };
+		2025916429C8484B00DE57AC /* FlexibleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916329C8484B00DE57AC /* FlexibleStackView.swift */; };
+		2025916729C8491600DE57AC /* Extension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916629C8491600DE57AC /* Extension+.swift */; };
+		2025916929C84AB200DE57AC /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916829C84AB200DE57AC /* MainPageController.swift */; };
+		2025916B29C89BCC00DE57AC /* MainPageFunctionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916A29C89BCC00DE57AC /* MainPageFunctionView.swift */; };
 		20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B32295DCECD000AEA3B /* ObservableObject.swift */; };
 		20522B35295DD31B000AEA3B /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B34295DD31B000AEA3B /* WordModel.swift */; };
 		2053A7C12963B86600CD2383 /* PopupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053A7C02963B86600CD2383 /* PopupService.swift */; };
@@ -57,6 +64,13 @@
 		20006AB3295980DF00ADA916 /* WordCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionCell.swift; sourceTree = "<group>"; };
 		20006AB4295980DF00ADA916 /* WordCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionCell.xib; sourceTree = "<group>"; };
 		20006ABC2959947000ADA916 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		2025915C29C8452F00DE57AC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2025915E29C845AC00DE57AC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2025916129C846BF00DE57AC /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		2025916329C8484B00DE57AC /* FlexibleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleStackView.swift; sourceTree = "<group>"; };
+		2025916629C8491600DE57AC /* Extension+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+.swift"; sourceTree = "<group>"; };
+		2025916829C84AB200DE57AC /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		2025916A29C89BCC00DE57AC /* MainPageFunctionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageFunctionView.swift; sourceTree = "<group>"; };
 		20522B32295DCECD000AEA3B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		20522B34295DD31B000AEA3B /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		2053A7C02963B86600CD2383 /* PopupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupService.swift; sourceTree = "<group>"; };
@@ -155,6 +169,33 @@
 			path = GameView;
 			sourceTree = "<group>";
 		};
+		2025915B29C8449500DE57AC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2025915C29C8452F00DE57AC /* Coordinator.swift */,
+				2025915E29C845AC00DE57AC /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2025916029C846A600DE57AC /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				2025916129C846BF00DE57AC /* MainPage.swift */,
+				2025916A29C89BCC00DE57AC /* MainPageFunctionView.swift */,
+				2025916829C84AB200DE57AC /* MainPageController.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		2025916529C848FB00DE57AC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2025916629C8491600DE57AC /* Extension+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		20861F482956CF7300423736 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +211,8 @@
 		20861F4F2956D04A00423736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2025916029C846A600DE57AC /* MainPage */,
+				2025915B29C8449500DE57AC /* Coordinator */,
 				42AABCEF2966ACC60071C1BB /* UserView */,
 				42AABCE629629E710071C1BB /* BaseSet */,
 				42AABCD7295D075E0071C1BB /* RankView */,
@@ -178,6 +221,7 @@
 				20006AB9295983C700ADA916 /* MainView */,
 				20861F562956D6B100423736 /* ViewProtocol.swift */,
 				20522B32295DCECD000AEA3B /* ObservableObject.swift */,
+				2025916329C8484B00DE57AC /* FlexibleStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,14 +258,15 @@
 		2092B611295468D700092263 /* KrHangMan-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2025916529C848FB00DE57AC /* Extension */,
 				425EAC75296D36A900E8482F /* CoreData */,
 				42AABCE1295D18FA0071C1BB /* Constant */,
 				20006AAD29594BF400ADA916 /* AppService */,
 				20861F582956D6E200423736 /* Model */,
 				20861F4F2956D04A00423736 /* View */,
 				20861F482956CF7300423736 /* Resource */,
-				2092B612295468D700092263 /* AppDelegate.swift */,
 				2092B618295468D700092263 /* Main.storyboard */,
+				2092B612295468D700092263 /* AppDelegate.swift */,
 				2092B614295468D700092263 /* SceneDelegate.swift */,
 				2092B61B295468D900092263 /* Assets.xcassets */,
 				2092B61D295468D900092263 /* LaunchScreen.storyboard */,
@@ -432,15 +477,22 @@
 				42AABCEA29641E240071C1BB /* RankViewController.swift in Sources */,
 				42AABCE829629F370071C1BB /* UIViewController.swift in Sources */,
 				20C9557E297069D60048C64D /* UserDataService.swift in Sources */,
+				2025916929C84AB200DE57AC /* MainPageController.swift in Sources */,
 				20C8B0F029BF0CE200560284 /* Constant.swift in Sources */,
+				2025915D29C8452F00DE57AC /* Coordinator.swift in Sources */,
 				42AABCDB295D07C30071C1BB /* RankTableViewCell.swift in Sources */,
 				425EAC89296ED32900E8482F /* UserEntity+CoreDataClass.swift in Sources */,
+				2025916729C8491600DE57AC /* Extension+.swift in Sources */,
 				425EAC68296D0C7400E8482F /* UserModel.swift in Sources */,
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
 				425EAC8A296ED32900E8482F /* UserEntity+CoreDataProperties.swift in Sources */,
+				2025916429C8484B00DE57AC /* FlexibleStackView.swift in Sources */,
+				2025916B29C89BCC00DE57AC /* MainPageFunctionView.swift in Sources */,
 				206F0ECF295D4F98004E2C0E /* GameViewModel.swift in Sources */,
+				2025916229C846C000DE57AC /* MainPage.swift in Sources */,
 				206F0ED1295D4FBD004E2C0E /* APIServcie.swift in Sources */,
+				2025915F29C845AC00DE57AC /* MainCoordinator.swift in Sources */,
 				2092B613295468D700092263 /* AppDelegate.swift in Sources */,
 				425EAC6A296D0E0E00E8482F /* UserViewDataManager.swift in Sources */,
 				425EAC7D296D3BEE00E8482F /* CoreDataManager.swift in Sources */,

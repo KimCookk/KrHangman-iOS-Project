@@ -13,13 +13,26 @@ protocol ViewSetAble {
     func configureBind()
 }
 
-protocol PageView {
-    
-    func drawPageView() 
+protocol Page {
+    func configurePage()
+    func drawPage()
+}
+
+extension Page {
+    func configurePage() {
+        drawPage()
+    }
 }
 
 protocol View {
-    
+    func configureView()
+    func drawView()
+}
+
+extension View {
+    func configureView() {
+        drawView()
+    }
 }
 
 

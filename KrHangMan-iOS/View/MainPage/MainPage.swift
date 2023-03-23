@@ -4,10 +4,16 @@ import UIKit
 class MainPage: UIView {
   
     var container: FlexibleStackView = {
-        var flexibleStackView = FlexibleStackView(ratios: [1, 1], axis: .vertical)
+        var flexibleStackView = FlexibleStackView(ratios: [4, 6], axis: .vertical)
         
         
         return flexibleStackView
+    }()
+    
+    var contentView: MainPageContentView = {
+        var view = MainPageContentView(frame: .zero, false)
+        
+        return view
     }()
     
     var title: UILabel = {
@@ -15,9 +21,9 @@ class MainPage: UIView {
         label.text = "ᄒᆞᆫ글 행맨"
         label.textAlignment = .center
 
-        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 10)
+        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 80)
         label.numberOfLines = 0
-        label.minimumScaleFactor = 0.5
+        label.minimumScaleFactor = 0.1
         label.adjustsFontSizeToFitWidth = true
         
         return label
@@ -26,7 +32,7 @@ class MainPage: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        drawPageView()
+        drawPage()
         
     }
     
@@ -37,8 +43,8 @@ class MainPage: UIView {
     
 }
 
-extension MainPage: PageView {
-    func drawPageView() {
+extension MainPage: Page {
+    func drawPage() {
         self.addSubview(container)
         container.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
@@ -47,14 +53,21 @@ extension MainPage: PageView {
             make.height.equalToSuperview()
         }
         
-        container.addStackView(0, addView: title)
+        container.appendView(0, addView: title)
         title.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
             make.height.equalToSuperview().multipliedBy(0.3)
         }
-        title.sizeToFit()
+        
+        container.appendView(1, addView: contentView)
+        contentView.snp.makeConstraints{ (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.9)
+            make.height.equalToSuperview().multipliedBy(0.3)
+        }
         
     }
 }

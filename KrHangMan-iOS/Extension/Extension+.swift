@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 extension UIColor {
     static func getRandom() -> UIColor {
         let randomRed:CGFloat = CGFloat(drand48())
@@ -17,3 +18,5 @@ extension UIColor {
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
 }
+
+

@@ -32,7 +32,7 @@ class FlexibleStackView: UIStackView {
         configureView()
     }
     
-    func addStackView(_ index: Int, addView: UIView) {
+    func appendView(_ index: Int, addView: UIView) {
         guard stackUnitViews.count >= index + 1 else {
             return
         }

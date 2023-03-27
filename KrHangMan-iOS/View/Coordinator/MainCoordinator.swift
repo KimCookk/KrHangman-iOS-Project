@@ -7,7 +7,11 @@ class MainCoordinator: Coordinator {
     var children: [Coordinator]? = nil
 
     func eventOccurred(with type: Event) {
-        
+        switch type {
+        case .presentRankPage:
+            var viewController: UIViewController & Coordinating = RankPageController()
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     func start() {

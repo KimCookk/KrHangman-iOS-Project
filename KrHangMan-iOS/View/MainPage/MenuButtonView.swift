@@ -5,24 +5,30 @@ class MenuButtonView: UIView {
     
     var container: FlexibleStackView = {
         var stackView = FlexibleStackView(ratios: [1,1,1], axis: .vertical)
+        
         return stackView
     }()
     
     var startButton: UIButton = {
        var button = UIButton()
         button.setTitle("놀이 시작", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .darkGray
+        UIService.setGrayRoundStyleButton(button)
+        button.addTarget(self, action: #selector(tappedStartButton), for: .touchUpInside)
+        
         return button
     }()
     
     var showRankButton: UIButton = {
         var button = UIButton()
         button.setTitle("순위 확인", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .darkGray
+        UIService.setGrayRoundStyleButton(button)
+        button.addTarget(self, action: #selector(tappedShowRankButton), for: .touchUpInside)
+
         return button
     }()
+    
+    var clickStartButton: (() -> ())?
+    var clickShowRankButton: (() -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,7 +56,7 @@ extension MenuButtonView: View {
         startButton.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.7)
             make.height.equalToSuperview()
         }
         
@@ -58,8 +64,22 @@ extension MenuButtonView: View {
         showRankButton.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.7)
             make.height.equalToSuperview()
+        }
+    }
+}
+
+extension MenuButtonView {
+    @objc func tappedStartButton() {
+        if let clickStartButton = clickStartButton {
+            clickStartButton()
+        }
+    }
+    
+    @objc func tappedShowRankButton() {
+        if let clickShowRankButton = clickShowRankButton {
+            clickShowRankButton()
         }
     }
 }

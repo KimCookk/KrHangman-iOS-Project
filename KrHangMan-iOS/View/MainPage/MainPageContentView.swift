@@ -45,10 +45,14 @@ extension MainPageContentView: View {
         self.addSubview(contentView)
         contentView.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().multipliedBy(0.1)
             make.width.equalToSuperview()
             make.height.equalToSuperview()
         }
+    }
+    
+    func drawLayer() {
+        
     }
     
 }

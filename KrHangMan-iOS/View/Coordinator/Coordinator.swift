@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 enum Event {
-    case buttonTapped
+    case presentRankPage
 }
 
 protocol Coordinator {

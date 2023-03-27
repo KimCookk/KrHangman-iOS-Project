@@ -43,6 +43,8 @@
 		20CAAB1F29CC8317000D88F4 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAAB1E29CC8317000D88F4 /* MenuButtonView.swift */; };
 		20CAAB2129CC8972000D88F4 /* SnapKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAAB2029CC8972000D88F4 /* SnapKit+.swift */; };
 		20D023C529A1F8A100C564C0 /* ResponseRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D023C429A1F8A100C564C0 /* ResponseRank.swift */; };
+		20D138B029CEE14500FC7A9C /* RankPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D138AF29CEE14500FC7A9C /* RankPage.swift */; };
+		20D138B229CEE15400FC7A9C /* RankPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D138B129CEE15400FC7A9C /* RankPageController.swift */; };
 		20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D95745296E70520024F2B7 /* HelpPopupView.swift */; };
 		20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FF193A296C2B4C0073BC04 /* AppManager.swift */; };
 		35AF0A5FB741B2D4AB1B16E7 /* Pods_KrHangMan_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BB042B87102C2F177E1D7 /* Pods_KrHangMan_iOS.framework */; };
@@ -101,6 +103,8 @@
 		20CAAB1E29CC8317000D88F4 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
 		20CAAB2029CC8972000D88F4 /* SnapKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapKit+.swift"; sourceTree = "<group>"; };
 		20D023C429A1F8A100C564C0 /* ResponseRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRank.swift; sourceTree = "<group>"; };
+		20D138AF29CEE14500FC7A9C /* RankPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPage.swift; sourceTree = "<group>"; };
+		20D138B129CEE15400FC7A9C /* RankPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPageController.swift; sourceTree = "<group>"; };
 		20D95745296E70520024F2B7 /* HelpPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPopupView.swift; sourceTree = "<group>"; };
 		20FF193A296C2B4C0073BC04 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		383A216AD14EF26A38171E64 /* Pods-KrHangMan-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrHangMan-iOS.release.xcconfig"; path = "Target Support Files/Pods-KrHangMan-iOS/Pods-KrHangMan-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		20861F4F2956D04A00423736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20D138AE29CEE13300FC7A9C /* RankPage */,
 				2025916029C846A600DE57AC /* MainPage */,
 				2025915B29C8449500DE57AC /* Coordinator */,
 				42AABCEF2966ACC60071C1BB /* UserView */,
@@ -282,6 +287,15 @@
 				2092B620295468D900092263 /* Info.plist */,
 			);
 			path = "KrHangMan-iOS";
+			sourceTree = "<group>";
+		};
+		20D138AE29CEE13300FC7A9C /* RankPage */ = {
+			isa = PBXGroup;
+			children = (
+				20D138AF29CEE14500FC7A9C /* RankPage.swift */,
+				20D138B129CEE15400FC7A9C /* RankPageController.swift */,
+			);
+			path = RankPage;
 			sourceTree = "<group>";
 		};
 		425EAC75296D36A900E8482F /* CoreData */ = {
@@ -511,6 +525,7 @@
 				20522B35295DD31B000AEA3B /* WordModel.swift in Sources */,
 				42AABCEE29641ED80071C1BB /* GameViewController.swift in Sources */,
 				20C7DE11296F0D6500451714 /* APIParameter.swift in Sources */,
+				20D138B029CEE14500FC7A9C /* RankPage.swift in Sources */,
 				20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */,
 				20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */,
 				20006ABD2959947100ADA916 /* KeyboardView.swift in Sources */,
@@ -520,6 +535,7 @@
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
+				20D138B229CEE15400FC7A9C /* RankPageController.swift in Sources */,
 				206F0ECD295C9B18004E2C0E /* HangManGame.swift in Sources */,
 				20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */,
 				20006AAF29594C2800ADA916 /* UIService.swift in Sources */,

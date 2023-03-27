@@ -20,6 +20,16 @@ class UIService: ServiceAble {
         return backgroundImage
     }
     
+    static func setGrayRoundStyleButton(_ button: UIButton) {
+        button.backgroundColor = .darkGray
+        button.layer.cornerRadius = 10
+        if let titleLabel = button.titleLabel {
+            titleLabel.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 25)
+        }
+        
+        button.setTitleColor(.white, for: .normal)
+    }
+    
     func getBackgroundImg(_ backgroundView: UIView) -> UIImage {
         if let uiImage = UIImage(named: "background.jpeg") {
             UIGraphicsBeginImageContext(backgroundView.frame.size)

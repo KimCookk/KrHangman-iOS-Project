@@ -17,12 +17,15 @@ class InputUserView: UIView {
     var goButton: UIButton = {
         var button = UIButton()
         button.setTitle("놀러가기", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .darkGray
+        UIService.setGrayRoundStyleButton(button)
         return button
     }()
     
+    var clickGoButton: (() -> ())?
+
+    
     override init(frame: CGRect) {
+        print("InputUserView init")
         super.init(frame: frame)
         configureView()
         
@@ -60,4 +63,12 @@ extension InputUserView: View {
             make.height.equalToSuperview()
         }
     }
+    
 }
+
+extension InputUserView {
+    @objc func tappedStartButton() {
+        if let clickGoButton = clickGoButton {
+            clickGoButton()
+        }
+    }}

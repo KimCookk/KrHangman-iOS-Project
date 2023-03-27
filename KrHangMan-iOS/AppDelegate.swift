@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationController = UINavigationController()
         let coordinator = MainCoordinator()
+        navigationController.isNavigationBarHidden = true
         
         coordinator.navigationController = navigationController
         

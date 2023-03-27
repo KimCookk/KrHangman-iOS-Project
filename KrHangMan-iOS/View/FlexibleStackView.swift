@@ -68,8 +68,10 @@ class FlexibleStackUnitView: UIView {
     convenience init(ratio: Double) {
         self.init()
         self.ratio = ratio
-       
-        self.backgroundColor = UIColor.getRandom()
+        
+        if(appRunType == .test) {
+            self.backgroundColor = UIColor.getRandom()
+        }
     }
 }
 

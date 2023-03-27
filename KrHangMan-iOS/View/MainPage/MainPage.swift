@@ -4,7 +4,7 @@ import UIKit
 class MainPage: UIView {
   
     var container: FlexibleStackView = {
-        var flexibleStackView = FlexibleStackView(ratios: [4, 6], axis: .vertical)
+        var flexibleStackView = FlexibleStackView(ratios: [5, 5], axis: .vertical)
         
         
         return flexibleStackView
@@ -45,6 +45,7 @@ class MainPage: UIView {
 
 extension MainPage: Page {
     func drawPage() {
+        
         self.addSubview(container)
         container.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
@@ -66,8 +67,12 @@ extension MainPage: Page {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
-            make.height.equalToSuperview().multipliedBy(0.3)
+            make.height.equalToSuperview().multipliedBy(0.4)
         }
-        
+    }
+    
+    func drawLayer() {
+        //let backgroundImage = UIService.getBackgroundImg(self)
+        //self.backgroundColor = UIColor(patternImage: backgroundImage)
     }
 }

@@ -45,7 +45,6 @@ class MainPage: UIView {
 
 extension MainPage: Page {
     func drawPage() {
-        
         self.addSubview(container)
         container.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()

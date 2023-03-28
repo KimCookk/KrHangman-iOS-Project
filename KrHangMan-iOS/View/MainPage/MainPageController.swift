@@ -5,9 +5,9 @@ class MainPageController: UIViewController, Coordinating {
     var coordinator: Coordinator?
     
     var mainPage: MainPage = {
-        var pageView = MainPage()
+        var page = MainPage()
         
-        return pageView
+        return page
     }()
     
     override func viewDidLoad() {
@@ -25,6 +25,7 @@ extension MainPageController {
     func setPageView() {
         view.backgroundColor = .white
         view.addSubview(mainPage)
+        
         mainPage.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()

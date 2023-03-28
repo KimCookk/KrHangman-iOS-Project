@@ -35,6 +35,10 @@
 		2092B61A295468D700092263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2092B618295468D700092263 /* Main.storyboard */; };
 		2092B61C295468D900092263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2092B61B295468D900092263 /* Assets.xcassets */; };
 		2092B61F295468D900092263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2092B61D295468D900092263 /* LaunchScreen.storyboard */; };
+		209699DC29D31816002F136C /* Memo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 209699DB29D31816002F136C /* Memo.rtf */; };
+		209699DF29D31A13002F136C /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699DE29D31A13002F136C /* NavigationBarView.swift */; };
+		209699E129D320E8002F136C /* RankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E029D320E8002F136C /* RankListView.swift */; };
+		209699E329D32131002F136C /* RankListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E229D32131002F136C /* RankListCell.swift */; };
 		20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7DE0E296F09E700451714 /* MainViewModel.swift */; };
 		20C7DE11296F0D6500451714 /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7DE10296F0D6500451714 /* APIParameter.swift */; };
 		20C8B0F029BF0CE200560284 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8B0EF29BF0CE200560284 /* Constant.swift */; };
@@ -95,6 +99,10 @@
 		2092B61B295468D900092263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2092B61E295468D900092263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2092B620295468D900092263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209699DB29D31816002F136C /* Memo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Memo.rtf; sourceTree = "<group>"; };
+		209699DE29D31A13002F136C /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		209699E029D320E8002F136C /* RankListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListView.swift; sourceTree = "<group>"; };
+		209699E229D32131002F136C /* RankListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListCell.swift; sourceTree = "<group>"; };
 		20C7DE0E296F09E700451714 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		20C7DE10296F0D6500451714 /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		20C8B0EF29BF0CE200560284 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 				20861F4A2956CFA000423736 /* EBS훈민정음L.otf */,
 				20861F4B2956CFA000423736 /* EBS훈민정음R.otf */,
 				20861F492956CFA000423736 /* EBS훈민정음SB.otf */,
+				209699DB29D31816002F136C /* Memo.rtf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 		20861F4F2956D04A00423736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				209699DD29D319E7002F136C /* Common */,
 				20D138AE29CEE13300FC7A9C /* RankPage */,
 				2025916029C846A600DE57AC /* MainPage */,
 				2025915B29C8449500DE57AC /* Coordinator */,
@@ -289,11 +299,21 @@
 			path = "KrHangMan-iOS";
 			sourceTree = "<group>";
 		};
+		209699DD29D319E7002F136C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				209699DE29D31A13002F136C /* NavigationBarView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		20D138AE29CEE13300FC7A9C /* RankPage */ = {
 			isa = PBXGroup;
 			children = (
 				20D138AF29CEE14500FC7A9C /* RankPage.swift */,
 				20D138B129CEE15400FC7A9C /* RankPageController.swift */,
+				209699E029D320E8002F136C /* RankListView.swift */,
+				209699E229D32131002F136C /* RankListCell.swift */,
 			);
 			path = RankPage;
 			sourceTree = "<group>";
@@ -437,6 +457,7 @@
 				20006AB6295980DF00ADA916 /* WordCollectionCell.xib in Resources */,
 				20861F4E2956CFA000423736 /* EBS훈민정음R.otf in Resources */,
 				20861F4D2956CFA000423736 /* EBS훈민정음L.otf in Resources */,
+				209699DC29D31816002F136C /* Memo.rtf in Resources */,
 				20861F542956D2DC00423736 /* NanumMyeongjo-YetHangul.ttf in Resources */,
 				20861F552956D2DC00423736 /* NanumBarunGothic-YetHangul.ttf in Resources */,
 				20861F4C2956CFA000423736 /* EBS훈민정음SB.otf in Resources */,
@@ -495,6 +516,7 @@
 			files = (
 				42AABCE0295D14F40071C1BB /* RankViewDataManager.swift in Sources */,
 				42AABCF22966ACFE0071C1BB /* UserViewController.swift in Sources */,
+				209699DF29D31A13002F136C /* NavigationBarView.swift in Sources */,
 				42AABCEC29641E8B0071C1BB /* MainViewController.swift in Sources */,
 				2092B613295468D700092263 /* AppDelegate.swift in Sources */,
 				42AABCEA29641E240071C1BB /* RankViewController.swift in Sources */,
@@ -511,6 +533,7 @@
 				425EAC68296D0C7400E8482F /* UserModel.swift in Sources */,
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
+				209699E329D32131002F136C /* RankListCell.swift in Sources */,
 				425EAC8A296ED32900E8482F /* UserEntity+CoreDataProperties.swift in Sources */,
 				2025916429C8484B00DE57AC /* FlexibleStackView.swift in Sources */,
 				2025916B29C89BCC00DE57AC /* MainPageContentView.swift in Sources */,
@@ -535,6 +558,7 @@
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
+				209699E129D320E8002F136C /* RankListView.swift in Sources */,
 				20D138B229CEE15400FC7A9C /* RankPageController.swift in Sources */,
 				206F0ECD295C9B18004E2C0E /* HangManGame.swift in Sources */,
 				20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */,

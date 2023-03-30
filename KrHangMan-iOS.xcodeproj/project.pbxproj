@@ -217,6 +217,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2058DAAD29D5A93E006F0E44 /* GamePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GamePage;
+			sourceTree = "<group>";
+		};
 		20861F482956CF7300423736 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +240,7 @@
 		20861F4F2956D04A00423736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2058DAAD29D5A93E006F0E44 /* GamePage */,
 				209699DD29D319E7002F136C /* Common */,
 				20D138AE29CEE13300FC7A9C /* RankPage */,
 				2025916029C846A600DE57AC /* MainPage */,

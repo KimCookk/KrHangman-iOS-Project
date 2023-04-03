@@ -1,6 +1,6 @@
 import UIKit
 import SnapKit
-class MemesTableViewCell: UITableViewCell {
+class TempRankTableViewCell: UITableViewCell {
 
     static let identifier = "RankCell"
     

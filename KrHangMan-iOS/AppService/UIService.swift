@@ -26,7 +26,10 @@ class UIService: ServiceAble {
         if let titleLabel = button.titleLabel {
             titleLabel.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 25)
         }
-        
+        button.layer.shadowColor = UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1).cgColor
+        button.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        button.layer.shadowOpacity = 1.0
+        button.layer.shadowRadius = 0.0
         button.setTitleColor(.white, for: .normal)
     }
     

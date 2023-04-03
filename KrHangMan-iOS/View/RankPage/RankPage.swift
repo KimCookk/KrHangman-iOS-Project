@@ -18,18 +18,27 @@ class RankPage: UIView {
     }()
     
     var navigationBarView: NavigationBarView = {
-        var navigationBar = NavigationBarView(frame: .zero, title: "순위 확인")
         
+        var backButton = UIButton()
+        backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        backButton.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
+        
+        var navigationBar = NavigationBarView(frame: .zero, title: "상위 10명", leftView: backButton)
+        navigationBar.leftView = backButton
         return navigationBar
+    }()
+    
+    var rankTableView: RankTableView = {
+       var rankTable = RankTableView()
+        
+        return rankTable
     }()
     
     var myRankLabel: UILabel = {
        var label = UILabel()
-        
+        label.text = "나는 0000등 입니다."
         return label
     }()
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,5 +69,27 @@ extension RankPage: Page {
             make.height.equalToSuperview()
         }
         
+        container.appendView(1, addView: myRankLabel)
+        myRankLabel.snp.makeConstraints{ (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
+        }
+        
+        container.appendView(2, addView: rankTableView)
+        rankTableView.snp.makeConstraints{ (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
+        }
+        
+    }
+}
+
+extension RankPage {
+    @objc func tappedBackButton() {
+        print("RankPage occure tappedBackButton")
     }
 }

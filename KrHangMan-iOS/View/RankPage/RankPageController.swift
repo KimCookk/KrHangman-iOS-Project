@@ -14,7 +14,7 @@ class RankPageController: UIViewController, Coordinating {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPageView()
-//        setEvent()
+        setEvent()
     }
 }
 
@@ -32,10 +32,22 @@ extension RankPageController {
     }
     
     func setEvent() {
-    
+        rankPage.rankTableView.rankTable.dataSource = self
+        
     }
     
     func setPageLayer() {
         
+    }
+}
+
+extension RankPageController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TempRankTableViewCell.identifier, for: indexPath)
+        return cell
     }
 }

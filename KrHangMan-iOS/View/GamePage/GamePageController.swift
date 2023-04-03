@@ -1,8 +1,28 @@
-//
-//  GamePageController.swift
-//  KrHangMan-iOS
-//
-//  Created by 김태성 on 2023/03/31.
-//
-
 import Foundation
+import UIKit
+
+class GamePageController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
+    
+    var gamePage: GamePage = {
+        var page = GamePage()
+        
+        return page
+    }()
+}
+
+extension GamePageController {
+    func setPageView() {
+        
+    }
+    
+    func setEvent() {
+        
+    }
+    
+    func setPageLayer() {
+        
+    }
+}
+
+

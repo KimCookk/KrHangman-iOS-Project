@@ -21,6 +21,8 @@
 		20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B32295DCECD000AEA3B /* ObservableObject.swift */; };
 		20522B35295DD31B000AEA3B /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B34295DD31B000AEA3B /* WordModel.swift */; };
 		2053A7C12963B86600CD2383 /* PopupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053A7C02963B86600CD2383 /* PopupService.swift */; };
+		2058DAAF29D680CE006F0E44 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058DAAE29D680CE006F0E44 /* GamePage.swift */; };
+		2058DAB129D680DA006F0E44 /* GamePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058DAB029D680DA006F0E44 /* GamePageController.swift */; };
 		206F0ECD295C9B18004E2C0E /* HangManGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0ECC295C9B18004E2C0E /* HangManGame.swift */; };
 		206F0ECF295D4F98004E2C0E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0ECE295D4F98004E2C0E /* GameViewModel.swift */; };
 		206F0ED1295D4FBD004E2C0E /* APIServcie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0ED0295D4FBD004E2C0E /* APIServcie.swift */; };
@@ -37,8 +39,8 @@
 		2092B61F295468D900092263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2092B61D295468D900092263 /* LaunchScreen.storyboard */; };
 		209699DC29D31816002F136C /* Memo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 209699DB29D31816002F136C /* Memo.rtf */; };
 		209699DF29D31A13002F136C /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699DE29D31A13002F136C /* NavigationBarView.swift */; };
-		209699E129D320E8002F136C /* RankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E029D320E8002F136C /* RankListView.swift */; };
-		209699E329D32131002F136C /* RankListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E229D32131002F136C /* RankListCell.swift */; };
+		209699E129D320E8002F136C /* RankTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E029D320E8002F136C /* RankTableView.swift */; };
+		209699E329D32131002F136C /* RankTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E229D32131002F136C /* RankTableCell.swift */; };
 		20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7DE0E296F09E700451714 /* MainViewModel.swift */; };
 		20C7DE11296F0D6500451714 /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7DE10296F0D6500451714 /* APIParameter.swift */; };
 		20C8B0F029BF0CE200560284 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8B0EF29BF0CE200560284 /* Constant.swift */; };
@@ -83,6 +85,8 @@
 		20522B32295DCECD000AEA3B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		20522B34295DD31B000AEA3B /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		2053A7C02963B86600CD2383 /* PopupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupService.swift; sourceTree = "<group>"; };
+		2058DAAE29D680CE006F0E44 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
+		2058DAB029D680DA006F0E44 /* GamePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageController.swift; sourceTree = "<group>"; };
 		206F0ECC295C9B18004E2C0E /* HangManGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangManGame.swift; sourceTree = "<group>"; };
 		206F0ECE295D4F98004E2C0E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		206F0ED0295D4FBD004E2C0E /* APIServcie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServcie.swift; sourceTree = "<group>"; };
@@ -101,8 +105,8 @@
 		2092B620295468D900092263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209699DB29D31816002F136C /* Memo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Memo.rtf; sourceTree = "<group>"; };
 		209699DE29D31A13002F136C /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
-		209699E029D320E8002F136C /* RankListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListView.swift; sourceTree = "<group>"; };
-		209699E229D32131002F136C /* RankListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListCell.swift; sourceTree = "<group>"; };
+		209699E029D320E8002F136C /* RankTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableView.swift; sourceTree = "<group>"; };
+		209699E229D32131002F136C /* RankTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableCell.swift; sourceTree = "<group>"; };
 		20C7DE0E296F09E700451714 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		20C7DE10296F0D6500451714 /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		20C8B0EF29BF0CE200560284 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 		2058DAAD29D5A93E006F0E44 /* GamePage */ = {
 			isa = PBXGroup;
 			children = (
+				2058DAAE29D680CE006F0E44 /* GamePage.swift */,
+				2058DAB029D680DA006F0E44 /* GamePageController.swift */,
 			);
 			path = GamePage;
 			sourceTree = "<group>";
@@ -320,8 +326,8 @@
 			children = (
 				20D138AF29CEE14500FC7A9C /* RankPage.swift */,
 				20D138B129CEE15400FC7A9C /* RankPageController.swift */,
-				209699E029D320E8002F136C /* RankListView.swift */,
-				209699E229D32131002F136C /* RankListCell.swift */,
+				209699E029D320E8002F136C /* RankTableView.swift */,
+				209699E229D32131002F136C /* RankTableCell.swift */,
 			);
 			path = RankPage;
 			sourceTree = "<group>";
@@ -536,12 +542,13 @@
 				2025915D29C8452F00DE57AC /* Coordinator.swift in Sources */,
 				42AABCDB295D07C30071C1BB /* RankTableViewCell.swift in Sources */,
 				20CAAB1F29CC8317000D88F4 /* MenuButtonView.swift in Sources */,
+				2058DAB129D680DA006F0E44 /* GamePageController.swift in Sources */,
 				425EAC89296ED32900E8482F /* UserEntity+CoreDataClass.swift in Sources */,
 				2025916729C8491600DE57AC /* Extension+.swift in Sources */,
 				425EAC68296D0C7400E8482F /* UserModel.swift in Sources */,
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
-				209699E329D32131002F136C /* RankListCell.swift in Sources */,
+				209699E329D32131002F136C /* RankTableCell.swift in Sources */,
 				425EAC8A296ED32900E8482F /* UserEntity+CoreDataProperties.swift in Sources */,
 				2025916429C8484B00DE57AC /* FlexibleStackView.swift in Sources */,
 				2025916B29C89BCC00DE57AC /* MainPageContentView.swift in Sources */,
@@ -560,13 +567,14 @@
 				20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */,
 				20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */,
 				20006ABD2959947100ADA916 /* KeyboardView.swift in Sources */,
+				2058DAAF29D680CE006F0E44 /* GamePage.swift in Sources */,
 				425EAC86296ED26500E8482F /* UserDataCRUD.xcdatamodeld in Sources */,
 				20006AB5295980DF00ADA916 /* WordCollectionCell.swift in Sources */,
 				20D023C529A1F8A100C564C0 /* ResponseRank.swift in Sources */,
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,
-				209699E129D320E8002F136C /* RankListView.swift in Sources */,
+				209699E129D320E8002F136C /* RankTableView.swift in Sources */,
 				20D138B229CEE15400FC7A9C /* RankPageController.swift in Sources */,
 				206F0ECD295C9B18004E2C0E /* HangManGame.swift in Sources */,
 				20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */,

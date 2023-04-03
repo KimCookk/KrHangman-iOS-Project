@@ -71,7 +71,7 @@ extension MainPage: Page {
     }
     
     func drawLayer() {
-        //let backgroundImage = UIService.getBackgroundImg(self)
-        //self.backgroundColor = UIColor(patternImage: backgroundImage)
+        let backgroundImage = UIService.getBackgroundImg(self)
+        self.backgroundColor = UIColor(patternImage: backgroundImage)
     }
 }

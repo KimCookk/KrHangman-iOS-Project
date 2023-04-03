@@ -12,7 +12,7 @@ class NavigationBarView: UIView {
         return flexibleStackView
     }()
     
-    var leftButtonView: UIView = {
+    var barLeftView: UIView = {
         var view = UIView()
         
         return view
@@ -20,18 +20,29 @@ class NavigationBarView: UIView {
     
     var titleLabel: UILabel = {
         var label = UILabel()
+        label.textAlignment = .center
         
         return label
     }()
     
-    var rightButtonView: UIView = {
+    var barRightView: UIView = {
         var view = UIView()
         
         return view
     }()
     
-    init(frame: CGRect, title: String) {
+    var leftView: UIView?
+    
+    var rightView: UIView?
+    
+    init(frame: CGRect, title: String, leftView: UIView? = nil, rightView: UIView? = nil) {
         self.title = title
+        if let leftView = leftView {
+            self.leftView = leftView
+        }
+        if let rightView = rightView {
+            self.rightView = rightView
+        }
         super.init(frame: frame)
         configureView()
     }
@@ -53,12 +64,22 @@ extension NavigationBarView: View {
             make.height.equalToSuperview()
         }
         
-        container.appendView(0, addView: leftButtonView)
-        leftButtonView.snp.makeConstraints{ (make) in
+        container.appendView(0, addView: barLeftView)
+        barLeftView.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalToSuperview()
             make.height.equalToSuperview()
+        }
+        
+        if let leftView = leftView {
+            barLeftView.addSubview(leftView)
+            leftView.snp.makeConstraints{ (make) in
+                make.centerX.equalToSuperview()
+                make.centerY.equalToSuperview()
+                make.width.equalToSuperview()
+                make.height.equalToSuperview()
+            }
         }
         
         container.appendView(1, addView: titleLabel)
@@ -69,12 +90,22 @@ extension NavigationBarView: View {
             make.height.equalToSuperview()
         }
         
-        container.appendView(2, addView: rightButtonView)
-        rightButtonView.snp.makeConstraints{ (make) in
+        container.appendView(2, addView: barRightView)
+        barRightView.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalToSuperview()
             make.height.equalToSuperview()
+        }
+        
+        if let rightView = rightView {
+            barRightView.addSubview(rightView)
+            rightView.snp.makeConstraints{ (make) in
+                make.centerX.equalToSuperview()
+                make.centerY.equalToSuperview()
+                make.width.equalToSuperview()
+                make.height.equalToSuperview()
+            }
         }
     }
 }

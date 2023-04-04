@@ -33,11 +33,21 @@ extension RankPageController {
     
     func setEvent() {
         rankPage.rankTableView.rankTable.dataSource = self
-        
+        rankPage.eventDelegate = receivePageEvent
     }
     
     func setPageLayer() {
         
+    }
+}
+
+extension RankPageController {
+    private func receivePageEvent(_ event: RankPage.Event) {
+        switch event {
+        case .tappedBackButton:
+            coordinator?.eventOccurred(with: .backPage)
+            
+        }
     }
 }
 
@@ -49,5 +59,5 @@ extension RankPageController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TempRankTableViewCell.identifier, for: indexPath)
         return cell
-    }
+    }    
 }

@@ -13,8 +13,7 @@ class RankTableView: UIView {
        let tableView = UITableView()
         tableView.backgroundColor = .systemGray
         tableView.register(TempRankTableViewCell.self, forCellReuseIdentifier: TempRankTableViewCell.identifier)
-        
-        
+       
         return tableView
     }()
     
@@ -39,6 +38,7 @@ extension RankTableView: View {
             make.width.equalToSuperview()
             make.height.equalToSuperview()
         }
+        
     }
 }
 

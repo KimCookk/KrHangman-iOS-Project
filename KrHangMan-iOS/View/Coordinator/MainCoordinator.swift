@@ -7,10 +7,15 @@ class MainCoordinator: Coordinator {
     var children: [Coordinator]? = nil
 
     func eventOccurred(with type: Event) {
-        switch type {
-        case .presentRankPage:
-            var viewController: UIViewController & Coordinating = RankPageController()
-            navigationController?.pushViewController(viewController, animated: true)
+        if let navigationController = navigationController {
+            switch type {
+            case .presentRankPage:
+                var viewController: UIViewController & Coordinating = RankPageController()
+                viewController.coordinator = self
+                navigationController.pushViewController(viewController, animated: true)
+            case .backPage:
+                navigationController.popViewController(animated: true)
+            }
         }
     }
     

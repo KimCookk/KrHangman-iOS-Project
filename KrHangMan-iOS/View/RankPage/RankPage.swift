@@ -10,7 +10,9 @@ import SnapKit
 import UIKit
 
 class RankPage: UIView {
-    
+    enum Event {
+        case tappedBackButton
+    }
     var container: FlexibleStackView = {
         var flexibleStackView = FlexibleStackView(ratios: [1, 1, 10], axis: .vertical)
         
@@ -39,6 +41,8 @@ class RankPage: UIView {
         label.text = "나는 0000등 입니다."
         return label
     }()
+    
+    var eventDelegate: ((Event) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,5 +95,8 @@ extension RankPage: Page {
 extension RankPage {
     @objc func tappedBackButton() {
         print("RankPage occure tappedBackButton")
+        if let eventDelegate = eventDelegate {
+            eventDelegate(.tappedBackButton)
+        }
     }
 }

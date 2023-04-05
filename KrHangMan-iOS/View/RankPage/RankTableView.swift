@@ -13,7 +13,7 @@ class RankTableView: UIView {
        let tableView = UITableView()
         tableView.backgroundColor = .systemGray
         tableView.register(TempRankTableViewCell.self, forCellReuseIdentifier: TempRankTableViewCell.identifier)
-       
+        tableView.rowHeight = 100
         return tableView
     }()
     

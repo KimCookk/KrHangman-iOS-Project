@@ -47,10 +47,10 @@ extension MainPage: Page {
     func drawPage() {
         self.addSubview(container)
         container.snp.makeConstraints{ (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalToSuperview()
-            make.height.equalToSuperview()
+            make.centerX.equalTo(self.safeAreaLayoutGuide)
+            make.centerY.equalTo(self.safeAreaLayoutGuide)
+            make.width.equalTo(self.safeAreaLayoutGuide)
+            make.height.equalTo(self.safeAreaLayoutGuide)
         }
         
         container.appendView(0, addView: title)

@@ -16,6 +16,10 @@ class RankPageController: UIViewController, Coordinating {
         setPageView()
         setEvent()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setPageLayer()
+    }
 }
 
 extension RankPageController {
@@ -24,10 +28,10 @@ extension RankPageController {
         view.addSubview(rankPage)
         
         rankPage.snp.makeConstraints{ make in
-            make.centerX.equalTo(view.safeAreaLayoutGuide)
-            make.centerY.equalTo(view.safeAreaLayoutGuide)
-            make.width.equalTo(view.safeAreaLayoutGuide)
-            make.height.equalTo(view.safeAreaLayoutGuide)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
         }
     }
     
@@ -37,7 +41,7 @@ extension RankPageController {
     }
     
     func setPageLayer() {
-        
+        rankPage.drawLayer()
     }
 }
 

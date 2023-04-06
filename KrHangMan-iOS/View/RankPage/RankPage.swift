@@ -1,10 +1,3 @@
-//
-//  RankPage.swift
-//  KrHangMan-iOS
-//
-//  Created by 김태성 on 2023/03/25.
-//
-
 import Foundation
 import SnapKit
 import UIKit
@@ -22,10 +15,14 @@ class RankPage: UIView {
     var navigationBarView: NavigationBarView = {
         
         var backButton = UIButton()
-        backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 25, weight: .light)
+        let image = UIImage(systemName: "chevron.backward", withConfiguration: imageConfig)
+        backButton.setImage(image, for: .normal)
+        
+        backButton.tintColor = .black
         backButton.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         
-        var navigationBar = NavigationBarView(frame: .zero, title: "상위 10명", leftView: backButton)
+        var navigationBar = NavigationBarView(frame: .zero, title: "순위 상위 10명", leftView: backButton)
         navigationBar.leftView = backButton
         return navigationBar
     }()
@@ -59,10 +56,10 @@ extension RankPage: Page {
     func drawPage() {
         self.addSubview(container)
         container.snp.makeConstraints{ (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalToSuperview()
-            make.height.equalToSuperview()
+            make.centerX.equalTo(self.safeAreaLayoutGuide)
+            make.centerY.equalTo(self.safeAreaLayoutGuide)
+            make.width.equalTo(self.safeAreaLayoutGuide)
+            make.height.equalTo(self.safeAreaLayoutGuide)
         }
         
         container.appendView(0, addView: navigationBarView)
@@ -88,7 +85,11 @@ extension RankPage: Page {
             make.width.equalToSuperview()
             make.height.equalToSuperview()
         }
-        
+    }
+    
+    func drawLayer() {
+        let backgroundImage = UIService.getBackgroundImg(self)
+        self.backgroundColor = UIColor(patternImage: backgroundImage)
     }
 }
 

@@ -58,26 +58,25 @@ class TempRankTableViewCell: UITableViewCell {
 extension TempRankTableViewCell: View {
     func drawView() {
         
-        self.contentView.backgroundColor = .orange
 // Changing the translatesAutoresizingMaskIntoConstraints property of the contentView of a UITableViewCell is not supported and will result 오류 발생
 //        self.contentView.snp.makeConstraints{ make in
 //            make.edges.equalToSuperview()
 //        }
-
+        self.backgroundColor = .clear
         contentView.addSubview(cellContainer)
         cellContainer.snp.makeConstraints{ make in
             make.edges.equalToSuperview().inset(5)
         }
-//
-//        cellContainer.appendView(0, addView: scoreContainer)
-//        scoreContainer.snp.makeConstraints{ make in
-//            make.edges.equalToSuperview()
-//        }
-//
-//        cellContainer.appendView(1, addView: rankContainer)
-//        rankContainer.snp.makeConstraints{ make in
-//            make.edges.equalToSuperview()
-//        }
+
+        cellContainer.appendView(0, addView: scoreContainer)
+        scoreContainer.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+
+        cellContainer.appendView(1, addView: rankContainer)
+        rankContainer.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
     }
 }
 

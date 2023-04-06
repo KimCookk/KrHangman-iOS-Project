@@ -21,6 +21,7 @@ class NavigationBarView: UIView {
     var titleLabel: UILabel = {
         var label = UILabel()
         label.textAlignment = .center
+        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 25)
         
         return label
     }()

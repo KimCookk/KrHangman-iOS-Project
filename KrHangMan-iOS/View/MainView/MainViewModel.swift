@@ -9,8 +9,6 @@ import Foundation
 
 class MainViewModel {
     
-    
-    
     func receiveViewEvent(_ event: MainViewController.MainViewEvent) {
         print("MainViewEvent Occur \(event)")
         switch event {

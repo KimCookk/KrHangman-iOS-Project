@@ -8,7 +8,11 @@
 import Foundation
 import Alamofire
 
+enum RunType {
+    case test, common, dev
+}
 
+let appRunType: RunType = .common
 
 class APIService: ServiceAble{
 

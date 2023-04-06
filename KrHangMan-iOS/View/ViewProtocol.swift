@@ -12,3 +12,40 @@ protocol ViewSetAble {
     // configureBind : ViewModel 데이터와 바인드 설정
     func configureBind()
 }
+
+protocol Page {
+    func configurePage()
+    func drawPage()
+}
+
+extension Page {
+    func configurePage() {
+        drawPage()
+    }
+}
+
+protocol View {
+    func configureView()
+    func drawView()
+}
+
+extension View {
+    func configureView() {
+        drawView()
+    }
+}
+
+
+protocol ViewAble {
+    func configureView()
+    func configureDraw()
+    func configureEvent()
+    
+}
+
+extension ViewAble {
+    func configureView() {
+        configureDraw()
+        configureEvent()
+    }
+}

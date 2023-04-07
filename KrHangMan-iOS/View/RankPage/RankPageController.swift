@@ -4,6 +4,7 @@ import Foundation
 
 class RankPageController: UIViewController, Coordinating {
     var coordinator: Coordinator?
+    var rankPageViewModel: RankPageController?
     
     var rankPage: RankPage = {
         var page = RankPage()
@@ -57,7 +58,7 @@ extension RankPageController {
 
 extension RankPageController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

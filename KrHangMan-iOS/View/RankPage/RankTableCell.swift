@@ -7,7 +7,8 @@ class TempRankTableViewCell: UITableViewCell {
 
     var cellContainer: FlexibleStackView = {
         var view = FlexibleStackView(ratios: [5, 1], axis: .horizontal)
-        
+        view.backgroundColor = .white.withAlphaComponent(0.5)
+        view.layer.cornerRadius = 15
         return view
     }()
     
@@ -65,7 +66,7 @@ extension TempRankTableViewCell: View {
         self.backgroundColor = .clear
         contentView.addSubview(cellContainer)
         cellContainer.snp.makeConstraints{ make in
-            make.edges.equalToSuperview().inset(5)
+            make.edges.equalToSuperview().inset(10)
         }
 
         cellContainer.appendView(0, addView: scoreContainer)

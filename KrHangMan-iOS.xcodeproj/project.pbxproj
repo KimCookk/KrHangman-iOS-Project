@@ -20,6 +20,7 @@
 		2025916B29C89BCC00DE57AC /* MainPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916A29C89BCC00DE57AC /* MainPageContentView.swift */; };
 		202C7AB029E05D3A00813A1D /* RankPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AAF29E05D3A00813A1D /* RankPageViewModel.swift */; };
 		202C7AB229E0638F00813A1D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AB129E0638F00813A1D /* ViewModelProtocol.swift */; };
+		202C7AB429E13CE400813A1D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AB329E13CE400813A1D /* NetworkClient.swift */; };
 		20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B32295DCECD000AEA3B /* ObservableObject.swift */; };
 		20522B35295DD31B000AEA3B /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B34295DD31B000AEA3B /* WordModel.swift */; };
 		2053A7C12963B86600CD2383 /* PopupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053A7C02963B86600CD2383 /* PopupService.swift */; };
@@ -86,6 +87,7 @@
 		2025916A29C89BCC00DE57AC /* MainPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageContentView.swift; sourceTree = "<group>"; };
 		202C7AAF29E05D3A00813A1D /* RankPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPageViewModel.swift; sourceTree = "<group>"; };
 		202C7AB129E0638F00813A1D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		202C7AB329E13CE400813A1D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		20522B32295DCECD000AEA3B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		20522B34295DD31B000AEA3B /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		2053A7C02963B86600CD2383 /* PopupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupService.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				2053A7C02963B86600CD2383 /* PopupService.swift */,
 				20FF193A296C2B4C0073BC04 /* AppManager.swift */,
 				20C9557D297069D60048C64D /* UserDataService.swift */,
+				202C7AB329E13CE400813A1D /* NetworkClient.swift */,
 			);
 			path = AppService;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				20522B35295DD31B000AEA3B /* WordModel.swift in Sources */,
 				42AABCEE29641ED80071C1BB /* GameViewController.swift in Sources */,
 				20C7DE11296F0D6500451714 /* APIParameter.swift in Sources */,
+				202C7AB429E13CE400813A1D /* NetworkClient.swift in Sources */,
 				20D138B029CEE14500FC7A9C /* RankPage.swift in Sources */,
 				20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */,
 				20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */,

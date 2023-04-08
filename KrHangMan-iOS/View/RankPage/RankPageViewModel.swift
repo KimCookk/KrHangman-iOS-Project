@@ -13,6 +13,25 @@ class RankPageViewModel {
         case loading
     }
     
+    let usersRankObservable = ObservableObject<[TopRankInfo]>([])
+    let eventObservable = ObservableObject<Event>(nil)
+    
+    init() {
+        NetworkingClinet.shared.request(urlString: Constant.getURLString(.GET_RANK), httpMethod: .get, type: ResRank.self) { responseData, error in
+            if let error = error {
+                return
+            }
+            if let responseData = responseData {
+                
+            }
+        }
+    }
+}
+
+struct TopRankInfo {
+    var userName: String
+    var rank: String
+    var scoreDescription: String
 }
 
 

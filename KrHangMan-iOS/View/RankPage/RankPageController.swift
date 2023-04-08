@@ -4,7 +4,7 @@ import Foundation
 
 class RankPageController: UIViewController, Coordinating {
     var coordinator: Coordinator?
-    var rankPageViewModel: RankPageController?
+    var viewModel: RankPageViewModel?
     
     var rankPage: RankPage = {
         var page = RankPage()

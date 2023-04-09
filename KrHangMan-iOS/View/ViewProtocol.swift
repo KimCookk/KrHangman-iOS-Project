@@ -50,4 +50,10 @@ extension ViewAble {
     }
 }
 
+protocol ViewContolling {
+    var viewModel: ViewModel? { get set }
+}
 
+protocol ViewModel {
+    
+}

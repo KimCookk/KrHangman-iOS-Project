@@ -2,15 +2,16 @@ import UIKit
 import Foundation
 
 
-class RankPageController: UIViewController, Coordinating {
+class RankPageController: UIViewController, Coordinating, ViewContolling {
     var coordinator: Coordinator?
-    var viewModel: RankPageViewModel?
+    var viewModel: ViewModel?
     
     var rankPage: RankPage = {
         var page = RankPage()
         
         return page
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

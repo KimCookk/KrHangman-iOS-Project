@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RankPageViewModel {
+class RankPageViewModel: ViewModel {
     
     enum Event {
         case loading

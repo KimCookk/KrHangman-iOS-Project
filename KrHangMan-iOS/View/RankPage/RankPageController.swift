@@ -15,8 +15,11 @@ class RankPageController: UIViewController, Coordinating, ViewContolling {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPageView()
-        setEvent()
+        configureController()
+        if let viewModel = viewModel as? RankPageViewModel {
+            viewModel.reqeustTopRankInfo()
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -25,6 +28,18 @@ class RankPageController: UIViewController, Coordinating, ViewContolling {
 }
 
 extension RankPageController {
+    
+    func configureController() {
+        setViewModel()
+        setPageView()
+        setEvent()
+        setBind()
+    }
+    
+    func setViewModel() {
+        viewModel = RankPageViewModel()
+    }
+    
     func setPageView() {
         view.backgroundColor = .white
         view.addSubview(rankPage)
@@ -40,6 +55,17 @@ extension RankPageController {
     func setEvent() {
         rankPage.rankTableView.rankTable.dataSource = self
         rankPage.eventDelegate = receivePageEvent
+        
+    }
+    
+    func setBind() {
+        if let viewModel = viewModel, let viewModelEventObservable = viewModel.viewModelEvent {
+            viewModelEventObservable.bind { event in
+                if let event = event as? RankPageViewModel.Event {
+                    self.receiveViewModelEvent(event)
+                }
+            }
+        }
     }
     
     func setPageLayer() {
@@ -53,6 +79,13 @@ extension RankPageController {
         case .tappedBackButton:
             coordinator?.eventOccurred(with: .backPage)
             
+        }
+    }
+    
+    private func receiveViewModelEvent(_ event: RankPageViewModel.Event) {
+        switch event {
+        case .loading:
+            break
         }
     }
 }

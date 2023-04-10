@@ -52,8 +52,15 @@ extension ViewAble {
 
 protocol ViewContolling {
     var viewModel: ViewModel? { get set }
+    
+    func configureController()
 }
 
 protocol ViewModel {
+    
+    var viewModelEvent: ObservableObject<ViewModelEvent>? { get set}
+}
+
+protocol ViewModelEvent {
     
 }

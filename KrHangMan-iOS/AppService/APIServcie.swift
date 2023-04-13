@@ -12,7 +12,7 @@ enum RunType {
     case test, common, dev
 }
 
-let appRunType: RunType = .common
+let appRunType: RunType = .test
 
 class APIService: ServiceAble{
 

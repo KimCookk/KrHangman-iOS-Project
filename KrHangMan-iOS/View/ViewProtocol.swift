@@ -58,7 +58,7 @@ protocol ViewContolling {
 
 protocol ViewModel {
     
-    var viewModelEvent: ObservableObject<ViewModelEvent>? { get set}
+    var viewModelEventObservable: ObservableObject<ViewModelEvent>? { get set}
 }
 
 protocol ViewModelEvent {

@@ -4,7 +4,7 @@ import Foundation
 
 class RankPageController: UIViewController, Coordinating, ViewContolling {
     var coordinator: Coordinator?
-    var viewModel: ViewModel?
+    var viewModel: ViewModel? = RankPageViewModel()
     
     var rankPage: RankPage = {
         var page = RankPage()
@@ -59,10 +59,24 @@ extension RankPageController {
     }
     
     func setBind() {
-        if let viewModel = viewModel, let viewModelEventObservable = viewModel.viewModelEvent {
+        if let viewModel = viewModel, let viewModelEventObservable = viewModel.viewModelEventObservable {
             viewModelEventObservable.bind { event in
                 if let event = event as? RankPageViewModel.Event {
                     self.receiveViewModelEvent(event)
+                }
+            }
+        }
+        
+        if let viewModel = viewModel as? RankPageViewModel {
+            if let eventObservable = viewModel.viewModelEventObservable {
+                eventObservable.bind { event in
+                    print(event)
+                }
+            }
+            if let usersRankObservable = viewModel.usersRankObservable {
+                usersRankObservable.bind { usersRank in
+                    print(usersRank)
+                    self.rankPage.reloadRankTable()
                 }
             }
         }
@@ -78,7 +92,6 @@ extension RankPageController {
         switch event {
         case .tappedBackButton:
             coordinator?.eventOccurred(with: .backPage)
-            
         }
     }
     

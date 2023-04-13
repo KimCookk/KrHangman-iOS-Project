@@ -91,6 +91,12 @@ extension RankPage: Page {
 }
 
 extension RankPage {
+    func reloadRankTable() {
+        rankTableView.reloadRankTable()
+    }
+}
+
+extension RankPage {
     @objc func tappedBackButton() {
         print("RankPage occure tappedBackButton")
         if let eventDelegate = eventDelegate {

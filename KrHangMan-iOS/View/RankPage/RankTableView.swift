@@ -43,4 +43,10 @@ extension RankTableView: View {
     }
 }
 
+extension RankTableView {
+    func reloadRankTable() {
+        rankTable.reloadData()
+    }
+}
+
 

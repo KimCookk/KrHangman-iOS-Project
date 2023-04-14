@@ -59,8 +59,8 @@ extension RankPageController {
     }
     
     func setBind() {
-        if let viewModel = viewModel, let viewModelEventObservable = viewModel.viewModelEventObservable {
-            viewModelEventObservable.bind { event in
+        if let viewModel = viewModel {
+            viewModel.viewModelEventObservable.bind { event in
                 if let event = event as? RankPageViewModel.Event {
                     self.receiveViewModelEvent(event)
                 }
@@ -68,17 +68,16 @@ extension RankPageController {
         }
         
         if let viewModel = viewModel as? RankPageViewModel {
-            if let eventObservable = viewModel.viewModelEventObservable {
-                eventObservable.bind { event in
+            
+                viewModel.viewModelEventObservable.bind { event in
                     print(event)
                 }
-            }
-            if let usersRankObservable = viewModel.usersRankObservable {
-                usersRankObservable.bind { usersRank in
+             
+                viewModel.usersRankObservable.bind { usersRank in
                     print(usersRank)
                     self.rankPage.reloadRankTable()
                 }
-            }
+            
         }
     }
     
@@ -91,7 +90,9 @@ extension RankPageController {
     private func receivePageEvent(_ event: RankPage.Event) {
         switch event {
         case .tappedBackButton:
-            coordinator?.eventOccurred(with: .backPage)
+            if let coordinator = coordinator {
+                coordinator.eventOccurred(with: .backPage)
+            }
         }
     }
     
@@ -105,11 +106,20 @@ extension RankPageController {
 
 extension RankPageController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        guard let viewModel = viewModel as? RankPageViewModel else {
+            return 0
+        }
+        
+        guard let count = viewModel.getUsersRankCount() else {
+            return 0
+        }
+        
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TempRankTableViewCell.identifier, for: indexPath)
+        
         return cell
     }    
 }

@@ -120,6 +120,19 @@ extension RankPageController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TempRankTableViewCell.identifier, for: indexPath)
         
+        guard let viewModel = viewModel as? RankPageViewModel else {
+            return cell
+        }
+        
+        guard let userRank = viewModel.getUserRank(indexPath.row) else {
+            return cell
+        }
+        
+        guard let cell = cell as? TempRankTableViewCell else {
+            return cell
+        }
+        
+        cell.setRankData(userName: userRank.userName, scoreDescription: userRank.scoreDescription, rank: userRank.rank)
         return cell
     }    
 }

@@ -35,6 +35,19 @@ class RankPageViewModel: ViewModel {
         }
         return value.count
     }
+    
+    func getUserRank(_ index: Int) -> TopRankInfo? {
+        guard let value = usersRankObservable.value else {
+            return nil
+        }
+        
+        guard value.count >= index else {
+            return nil
+        }
+        
+        return value[index]
+    }
+    
 }
 
 struct TopRankInfo {

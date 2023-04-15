@@ -73,11 +73,35 @@ extension TempRankTableViewCell: View {
         scoreContainer.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
         }
-
+        
+        scoreContainer.appendView(0, addView: userNameLabel)
+        userNameLabel.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+        
+        scoreContainer.appendView(1, addView: scoreDescriptionLabel)
+        scoreDescriptionLabel.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+        
         cellContainer.appendView(1, addView: rankContainer)
         rankContainer.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
         }
+        
+        rankContainer.addSubview(rankLabel)
+        rankLabel.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+    }
+}
+
+extension TempRankTableViewCell {
+    
+    func setRankData(userName: String, scoreDescription: String, rank: String ) {
+        userNameLabel.text = userName
+        scoreDescriptionLabel.text = scoreDescription
+        rankLabel.text = rank
     }
 }
 

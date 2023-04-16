@@ -132,7 +132,7 @@ extension RankPageController: UITableViewDataSource {
             return cell
         }
         
-        cell.setRankData(userName: userRank.userName, scoreDescription: userRank.scoreDescription, rank: userRank.rank)
+        cell.setRankData(userName: userRank.userName, scoreDescription: userRank.scoreDescription, rankDescription: userRank.rankDescription)
         return cell
     }    
 }

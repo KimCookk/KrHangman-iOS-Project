@@ -23,7 +23,7 @@ class RankPageViewModel: ViewModel {
             }
             if let responseData = responseData, let resRank = responseData.1 {
                 self.usersRankObservable.value = resRank.addRank.map { rank in
-                    return TopRankInfo(userName: rank.username, rank: "\(rank.ranking)", scoreDescription: "\(rank.correctCnt)")
+                    return TopRankInfo(userName: rank.username, rank: "\(rank.ranking)", score: "\(rank.correctCnt)")
                 }
             }
         }
@@ -53,7 +53,15 @@ class RankPageViewModel: ViewModel {
 struct TopRankInfo {
     var userName: String
     var rank: String
-    var scoreDescription: String
+    var score: String
+    
+    var scoreDescription: String {
+        return "총 \(score) 문제 성공!!"
+    }
+    
+    var rankDescription: String {
+        return "\(rank)등"
+    }
 }
 
 

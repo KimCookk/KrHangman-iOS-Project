@@ -8,7 +8,7 @@ class TempRankTableViewCell: UITableViewCell {
     var cellContainer: FlexibleStackView = {
         var view = FlexibleStackView(ratios: [5, 1], axis: .horizontal)
         view.backgroundColor = .white.withAlphaComponent(0.5)
-        view.layer.cornerRadius = 15
+        view.layer.cornerRadius = 10
         return view
     }()
     
@@ -20,13 +20,15 @@ class TempRankTableViewCell: UITableViewCell {
     
     var userNameLabel: UILabel = {
        var label = UILabel()
-        
+        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 18)
+
         return label
     }()
     
     var scoreDescriptionLabel: UILabel = {
         var label = UILabel()
-        
+        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 25)
+
         return label
     }()
     
@@ -38,7 +40,9 @@ class TempRankTableViewCell: UITableViewCell {
     
     lazy var rankLabel: UILabel = {
         var label = UILabel()
-        
+        label.font = UIFont(name: "NanumBarunGothic-YetHangul", size: 27)
+        label.textAlignment = .center
+
         return label
     }()
     
@@ -64,6 +68,8 @@ extension TempRankTableViewCell: View {
 //            make.edges.equalToSuperview()
 //        }
         self.backgroundColor = .clear
+        self.selectionStyle = .none
+        
         contentView.addSubview(cellContainer)
         cellContainer.snp.makeConstraints{ make in
             make.edges.equalToSuperview().inset(10)
@@ -76,12 +82,15 @@ extension TempRankTableViewCell: View {
         
         scoreContainer.appendView(0, addView: userNameLabel)
         userNameLabel.snp.makeConstraints{ make in
-            make.edges.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.left.right.equalToSuperview().inset(10)
         }
         
         scoreContainer.appendView(1, addView: scoreDescriptionLabel)
         scoreDescriptionLabel.snp.makeConstraints{ make in
-            make.edges.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.left.right.equalToSuperview().inset(10)
+            
         }
         
         cellContainer.appendView(1, addView: rankContainer)
@@ -98,10 +107,10 @@ extension TempRankTableViewCell: View {
 
 extension TempRankTableViewCell {
     
-    func setRankData(userName: String, scoreDescription: String, rank: String ) {
+    func setRankData(userName: String, scoreDescription: String, rankDescription: String ) {
         userNameLabel.text = userName
         scoreDescriptionLabel.text = scoreDescription
-        rankLabel.text = rank
+        rankLabel.text = rankDescription
     }
 }
 

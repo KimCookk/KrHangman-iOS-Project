@@ -18,6 +18,9 @@
 		2025916729C8491600DE57AC /* Extension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916629C8491600DE57AC /* Extension+.swift */; };
 		2025916929C84AB200DE57AC /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916829C84AB200DE57AC /* MainPageController.swift */; };
 		2025916B29C89BCC00DE57AC /* MainPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025916A29C89BCC00DE57AC /* MainPageContentView.swift */; };
+		202C7AB029E05D3A00813A1D /* RankPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AAF29E05D3A00813A1D /* RankPageViewModel.swift */; };
+		202C7AB229E0638F00813A1D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AB129E0638F00813A1D /* ViewModelProtocol.swift */; };
+		202C7AB429E13CE400813A1D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7AB329E13CE400813A1D /* NetworkClient.swift */; };
 		20522B33295DCECD000AEA3B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B32295DCECD000AEA3B /* ObservableObject.swift */; };
 		20522B35295DD31B000AEA3B /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20522B34295DD31B000AEA3B /* WordModel.swift */; };
 		2053A7C12963B86600CD2383 /* PopupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053A7C02963B86600CD2383 /* PopupService.swift */; };
@@ -82,6 +85,9 @@
 		2025916629C8491600DE57AC /* Extension+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+.swift"; sourceTree = "<group>"; };
 		2025916829C84AB200DE57AC /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		2025916A29C89BCC00DE57AC /* MainPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageContentView.swift; sourceTree = "<group>"; };
+		202C7AAF29E05D3A00813A1D /* RankPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPageViewModel.swift; sourceTree = "<group>"; };
+		202C7AB129E0638F00813A1D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		202C7AB329E13CE400813A1D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		20522B32295DCECD000AEA3B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		20522B34295DD31B000AEA3B /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		2053A7C02963B86600CD2383 /* PopupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupService.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 				2053A7C02963B86600CD2383 /* PopupService.swift */,
 				20FF193A296C2B4C0073BC04 /* AppManager.swift */,
 				20C9557D297069D60048C64D /* UserDataService.swift */,
+				202C7AB329E13CE400813A1D /* NetworkClient.swift */,
 			);
 			path = AppService;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 				20006ABA295983D600ADA916 /* GameView */,
 				20006AB9295983C700ADA916 /* MainView */,
 				20861F562956D6B100423736 /* ViewProtocol.swift */,
+				202C7AB129E0638F00813A1D /* ViewModelProtocol.swift */,
 				20522B32295DCECD000AEA3B /* ObservableObject.swift */,
 				2025916329C8484B00DE57AC /* FlexibleStackView.swift */,
 			);
@@ -328,6 +336,7 @@
 				20D138B129CEE15400FC7A9C /* RankPageController.swift */,
 				209699E029D320E8002F136C /* RankTableView.swift */,
 				209699E229D32131002F136C /* RankTableCell.swift */,
+				202C7AAF29E05D3A00813A1D /* RankPageViewModel.swift */,
 			);
 			path = RankPage;
 			sourceTree = "<group>";
@@ -559,10 +568,12 @@
 				2092B613295468D700092263 /* AppDelegate.swift in Sources */,
 				20CAAB1D29CC82F8000D88F4 /* InputUserView.swift in Sources */,
 				425EAC6A296D0E0E00E8482F /* UserViewDataManager.swift in Sources */,
+				202C7AB029E05D3A00813A1D /* RankPageViewModel.swift in Sources */,
 				425EAC7D296D3BEE00E8482F /* CoreDataManager.swift in Sources */,
 				20522B35295DD31B000AEA3B /* WordModel.swift in Sources */,
 				42AABCEE29641ED80071C1BB /* GameViewController.swift in Sources */,
 				20C7DE11296F0D6500451714 /* APIParameter.swift in Sources */,
+				202C7AB429E13CE400813A1D /* NetworkClient.swift in Sources */,
 				20D138B029CEE14500FC7A9C /* RankPage.swift in Sources */,
 				20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */,
 				20C7DE0F296F09E700451714 /* MainViewModel.swift in Sources */,
@@ -571,6 +582,7 @@
 				425EAC86296ED26500E8482F /* UserDataCRUD.xcdatamodeld in Sources */,
 				20006AB5295980DF00ADA916 /* WordCollectionCell.swift in Sources */,
 				20D023C529A1F8A100C564C0 /* ResponseRank.swift in Sources */,
+				202C7AB229E0638F00813A1D /* ViewModelProtocol.swift in Sources */,
 				2092B615295468D700092263 /* SceneDelegate.swift in Sources */,
 				20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */,
 				20861F572956D6B100423736 /* ViewProtocol.swift in Sources */,

@@ -72,10 +72,7 @@ extension RankPage: Page {
         
         container.appendView(1, addView: myRankLabel)
         myRankLabel.snp.makeConstraints{ (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalToSuperview()
-            make.height.equalToSuperview()
+            make.edges.equalToSuperview().inset(10)
         }
         
         container.appendView(2, addView: rankTableView)
@@ -90,6 +87,12 @@ extension RankPage: Page {
     func drawLayer() {
         let backgroundImage = UIService.getBackgroundImg(self)
         self.backgroundColor = UIColor(patternImage: backgroundImage)
+    }
+}
+
+extension RankPage {
+    func reloadRankTable() {
+        rankTableView.reloadRankTable()
     }
 }
 

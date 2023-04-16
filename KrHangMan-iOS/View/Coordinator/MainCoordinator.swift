@@ -12,6 +12,7 @@ class MainCoordinator: Coordinator {
             case .presentRankPage:
                 var viewController: UIViewController & Coordinating = RankPageController()
                 viewController.coordinator = self
+                
                 navigationController.pushViewController(viewController, animated: true)
             case .backPage:
                 navigationController.popViewController(animated: true)

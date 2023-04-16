@@ -14,6 +14,7 @@ class RankTableView: UIView {
         tableView.backgroundColor = .clear
         tableView.register(TempRankTableViewCell.self, forCellReuseIdentifier: TempRankTableViewCell.identifier)
         tableView.rowHeight = 100
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -39,6 +40,12 @@ extension RankTableView: View {
             make.height.equalToSuperview()
         }
         
+    }
+}
+
+extension RankTableView {
+    func reloadRankTable() {
+        rankTable.reloadData()
     }
 }
 

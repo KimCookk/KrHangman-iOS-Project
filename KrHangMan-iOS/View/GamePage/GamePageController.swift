@@ -1,8 +1,11 @@
 import Foundation
 import UIKit
 
-class GamePageController: UIViewController, Coordinating {
+class GamePageController: UIViewController, Coordinating, ViewContolling {
+    
+    
     var coordinator: Coordinator?
+    var viewModel: ViewModel?
     
     var gamePage: GamePage = {
         var page = GamePage()
@@ -12,6 +15,9 @@ class GamePageController: UIViewController, Coordinating {
 }
 
 extension GamePageController {
+    func configureController() {
+        
+    }
     func setPageView() {
         
     }

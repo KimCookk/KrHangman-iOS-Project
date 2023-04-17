@@ -51,6 +51,9 @@ extension MainPageController {
     
     func clickStartButton() {
         print("MainPageController clickStartButton")
+        if let coordinator = coordinator {
+            coordinator.eventOccurred(with: .presentGamePage)
+        }
     }
     
     func clickShowRankButton() {

@@ -48,7 +48,6 @@ extension MainPageController {
 }
 
 extension MainPageController {
-    
     func clickStartButton() {
         print("MainPageController clickStartButton")
         if let coordinator = coordinator {

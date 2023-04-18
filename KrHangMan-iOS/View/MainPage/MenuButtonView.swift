@@ -72,12 +72,14 @@ extension MenuButtonView: View {
 
 extension MenuButtonView {
     @objc func tappedStartButton() {
+        print("MenuButtonView Tapped StartButton")
         if let clickStartButton = clickStartButton {
             clickStartButton()
         }
     }
     
     @objc func tappedShowRankButton() {
+        print("MenuButtonView Tapped RankButton")
         if let clickShowRankButton = clickShowRankButton {
             clickShowRankButton()
         }

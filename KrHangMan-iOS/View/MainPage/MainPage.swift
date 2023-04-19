@@ -11,7 +11,7 @@ class MainPage: UIView {
     }()
     
     var contentView: MainPageContentView = {
-        var view = MainPageContentView(frame: .zero, false)
+        var view = MainPageContentView(isFirst: false)
         
         return view
     }()
@@ -64,7 +64,7 @@ extension MainPage: Page {
         container.appendView(1, addView: contentView)
         contentView.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().multipliedBy(0.5)
             make.width.equalToSuperview().multipliedBy(0.9)
             make.height.equalToSuperview().multipliedBy(0.4)
         }

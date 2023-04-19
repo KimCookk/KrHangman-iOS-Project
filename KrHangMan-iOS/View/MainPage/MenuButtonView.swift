@@ -13,10 +13,13 @@ class MenuButtonView: UIView {
        var button = UIButton()
         button.setTitle("놀이 시작", for: .normal)
         UIService.setGrayRoundStyleButton(button)
+        
         button.addTarget(self, action: #selector(tappedStartButton), for: .touchUpInside)
         
         return button
     }()
+    
+    
     
     var showRankButton: UIButton = {
         var button = UIButton()
@@ -60,6 +63,7 @@ extension MenuButtonView: View {
             make.height.equalToSuperview()
         }
         
+        
         container.appendView(2, addView: showRankButton)
         showRankButton.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
@@ -71,6 +75,7 @@ extension MenuButtonView: View {
 }
 
 extension MenuButtonView {
+    
     @objc func tappedStartButton() {
         print("MenuButtonView Tapped StartButton")
         if let clickStartButton = clickStartButton {

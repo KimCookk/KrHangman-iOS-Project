@@ -27,9 +27,10 @@ class MainPageContentView: UIView {
     }
     
     
-    init(frame: CGRect, _ isFirst: Bool) {
+    init(isFirst: Bool) {
         self.isFirst = isFirst
-        super.init(frame: frame)
+        super.init(frame: .zero)
+
         configureView()
         
     }
@@ -45,7 +46,7 @@ extension MainPageContentView: View {
         self.addSubview(contentView)
         contentView.snp.makeConstraints{ make in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().multipliedBy(0.1)
+            make.centerY.equalToSuperview()
             make.width.equalToSuperview()
             make.height.equalToSuperview()
         }

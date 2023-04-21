@@ -42,7 +42,7 @@ class MainPage: UIView {
     
     
 }
-
+// Pages
 extension MainPage: Page {
     func drawPage() {
         self.addSubview(container)

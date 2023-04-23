@@ -40,7 +40,6 @@
 		2092B61A295468D700092263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2092B618295468D700092263 /* Main.storyboard */; };
 		2092B61C295468D900092263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2092B61B295468D900092263 /* Assets.xcassets */; };
 		2092B61F295468D900092263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2092B61D295468D900092263 /* LaunchScreen.storyboard */; };
-		209699DC29D31816002F136C /* Memo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 209699DB29D31816002F136C /* Memo.rtf */; };
 		209699DF29D31A13002F136C /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699DE29D31A13002F136C /* NavigationBarView.swift */; };
 		209699E129D320E8002F136C /* RankTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E029D320E8002F136C /* RankTableView.swift */; };
 		209699E329D32131002F136C /* RankTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209699E229D32131002F136C /* RankTableCell.swift */; };
@@ -54,6 +53,7 @@
 		20D023C529A1F8A100C564C0 /* ResponseRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D023C429A1F8A100C564C0 /* ResponseRank.swift */; };
 		20D138B029CEE14500FC7A9C /* RankPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D138AF29CEE14500FC7A9C /* RankPage.swift */; };
 		20D138B229CEE15400FC7A9C /* RankPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D138B129CEE15400FC7A9C /* RankPageController.swift */; };
+		20D1511B29F56C8E004AD4D2 /* Memo.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D1511A29F56C8E004AD4D2 /* Memo.strings */; };
 		20D95746296E70520024F2B7 /* HelpPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D95745296E70520024F2B7 /* HelpPopupView.swift */; };
 		20FF193B296C2B4C0073BC04 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FF193A296C2B4C0073BC04 /* AppManager.swift */; };
 		35AF0A5FB741B2D4AB1B16E7 /* Pods_KrHangMan_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9BB042B87102C2F177E1D7 /* Pods_KrHangMan_iOS.framework */; };
@@ -109,7 +109,6 @@
 		2092B61B295468D900092263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2092B61E295468D900092263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2092B620295468D900092263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		209699DB29D31816002F136C /* Memo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Memo.rtf; sourceTree = "<group>"; };
 		209699DE29D31A13002F136C /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		209699E029D320E8002F136C /* RankTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableView.swift; sourceTree = "<group>"; };
 		209699E229D32131002F136C /* RankTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableCell.swift; sourceTree = "<group>"; };
@@ -123,6 +122,7 @@
 		20D023C429A1F8A100C564C0 /* ResponseRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseRank.swift; sourceTree = "<group>"; };
 		20D138AF29CEE14500FC7A9C /* RankPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPage.swift; sourceTree = "<group>"; };
 		20D138B129CEE15400FC7A9C /* RankPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPageController.swift; sourceTree = "<group>"; };
+		20D1511A29F56C8E004AD4D2 /* Memo.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Memo.strings; sourceTree = "<group>"; };
 		20D95745296E70520024F2B7 /* HelpPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPopupView.swift; sourceTree = "<group>"; };
 		20FF193A296C2B4C0073BC04 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		383A216AD14EF26A38171E64 /* Pods-KrHangMan-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrHangMan-iOS.release.xcconfig"; path = "Target Support Files/Pods-KrHangMan-iOS/Pods-KrHangMan-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 				20861F4A2956CFA000423736 /* EBS훈민정음L.otf */,
 				20861F4B2956CFA000423736 /* EBS훈민정음R.otf */,
 				20861F492956CFA000423736 /* EBS훈민정음SB.otf */,
-				209699DB29D31816002F136C /* Memo.rtf */,
+				20D1511A29F56C8E004AD4D2 /* Memo.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -476,11 +476,11 @@
 			files = (
 				2092B61F295468D900092263 /* LaunchScreen.storyboard in Resources */,
 				42AABCDC295D07C30071C1BB /* RankTableViewCell.xib in Resources */,
+				20D1511B29F56C8E004AD4D2 /* Memo.strings in Resources */,
 				2092B61C295468D900092263 /* Assets.xcassets in Resources */,
 				20006AB6295980DF00ADA916 /* WordCollectionCell.xib in Resources */,
 				20861F4E2956CFA000423736 /* EBS훈민정음R.otf in Resources */,
 				20861F4D2956CFA000423736 /* EBS훈민정음L.otf in Resources */,
-				209699DC29D31816002F136C /* Memo.rtf in Resources */,
 				20861F542956D2DC00423736 /* NanumMyeongjo-YetHangul.ttf in Resources */,
 				20861F552956D2DC00423736 /* NanumBarunGothic-YetHangul.ttf in Resources */,
 				20861F4C2956CFA000423736 /* EBS훈민정음SB.otf in Resources */,
